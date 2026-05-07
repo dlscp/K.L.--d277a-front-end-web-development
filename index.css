@@ -37,3 +37,90 @@
         transform: translateY(0);
     }
 }
+
+.page-header {
+  min-height: 190px; /* taller so larger elements breathe */
+}
+
+/* Background stays the same */
+.page-header__bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.02);
+}
+
+.page-header__overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.20)
+  );
+}
+
+/* Reserve right-side space for future nav */
+.page-header__right {
+  width: 260px; /* reserved area on desktop */
+  min-height: 1px;
+}
+
+@media (max-width: 991.98px) {
+  .page-header__right {
+    width: 140px; /* smaller reserve on mobile/tablet */
+  }
+}
+
+/* Keep left block from stretching into right reserve */
+.page-header__left {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-right: 1rem;
+}
+
+/* seal */
+.page-header__seal {
+  width: 110px;
+  height: 110px;
+  border: 4px solid rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 3; /* ensure it sits above titlebox */
+}
+
+/* TITLE BOX + overlaps with seal */
+.page-header__titlebox {
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(6px);
+  margin-left: -22px; /* overlap the seal */
+  padding-left: 44px; /* compensate so text doesn't sit under the seal edge */
+  position: relative;
+  z-index: 2;
+  width: min(720px, 100%); /* takes up more header width without breaking */
+}
+
+/* Title sizing */
+.page-header__titlebox h1 {
+  color: #111;
+  font-size: clamp(1.4rem, 2.2vw, 2.0rem);
+  line-height: 1.15;
+}
+
+/* Scale up on md+ */
+@media (min-width: 768px) {
+  .page-header {
+    min-height: 230px;
+  }
+
+  .page-header__seal {
+    width: 140px;
+    height: 140px;
+  }
+
+  .page-header__titlebox {
+    margin-left: -30px;  /* slightly more overlap */
+    padding-left: 70px;  /* more room for overlap */
+    width: min(860px, 100%);
+  }
+}

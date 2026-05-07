@@ -17,6 +17,25 @@ Not sure if i will end up using the components but could be a good option
 
 Began adding components of the front end template from part one. Found a good calendar and will add that later. need to push the begining of this proj to my github. 
 
+Okay I decided to make sure I could use components in my project since I haven't used it before and am used to using react for front end development. I used AI to figure out my options and decided on the fetch API method and made sure it can connect and inject the html of the test component into my page. it worked well and I can now inject html snippits into the pages and can seperate things out. I am worried about the layout formatting but it should be okay. I do need to use the live server for things to show up rather than just the html path pasted into the browser. 
+
+This is causing me issues due to the render order and things are displaying right. 
+
+I got things cleaned up and working for the calendar portion. Tested the calander component and different functionality and styling, this is cleaned up and seems to be working okay. 
+
+Moved things around for the components, things are now seperated out well. 
+
+Added demo events to the calendar and it is a good starting point if I want to add more later. 
+
+I am using bootstrap and will adjust styling later but my template was very bootstrap centered and plain so could keep it the same easier. 
+
+Okay I got some pictures for the background and seal added in. These are used in the header component and is displaying well. I added a good amount of logic in my js to get it to work well even across the different page, I still need to figure out how to put the navbar inside of the header though. 
+
+Okay I adjusted the logic and the components so the navbar renders inside of the header. I also have connected it to the other pages, the basic logic is working even while those pages are blank. Next I can get those pages to have at least the basic loading. 
+
+Style wise things look gross but that can be adjusted later. 
+
+Things are looking good and this is a good save point. When I come back I will begin on more components that can be used in multiple pages. 
 
 
 

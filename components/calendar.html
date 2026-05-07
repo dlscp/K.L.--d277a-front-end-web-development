@@ -1,0 +1,48 @@
+<!-- This is looking good since i made it only a section, well a snippit that could be reused again. the js is in the only js file for the proj but could be seperated out if i think this would be a better solution -->
+
+<section class="container my-5">
+  <div class="row justify-content-center mb-4">
+    <div class="col-md-6 text-center">
+      <!-- <h2>Calendar</h2> -->
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="calendar-container">
+        <div class="calendar">
+          <div class="year-header d-flex justify-content-between align-items-center mb-3">
+            <button class="btn btn-outline-secondary btn-md" id="prevYear" type="button" aria-label="Previous year">
+              <span aria-hidden="true">&lsaquo;</span>
+            </button>
+
+            <div class="fw-bold fs-5" id="yearLabel"></div>
+
+            <button class="btn btn-outline-secondary btn-md" id="nextYear" type="button" aria-label="Next year">
+              <span aria-hidden="true">&rsaquo;</span>
+            </button>
+          </div>
+
+          <table class="table table-borderless text-center months-table">
+            <tbody>
+              <tr id="monthsRow"></tr>
+            </tbody>
+          </table>
+
+          <table class="table table-borderless text-center days-table">
+            <thead>
+              <tr>
+                <th>Sun</th><th>Mon</th><th>Tue</th>
+                <th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+              </tr>
+            </thead>
+            <tbody id="datesBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Events (only shows when an event date is clicked) -->
+      <div class="events-container mt-4"></div>
+    </div>
+  </div>
+</section>
